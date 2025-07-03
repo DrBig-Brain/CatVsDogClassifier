@@ -1,3 +1,4 @@
+
 import streamlit
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
@@ -29,4 +30,4 @@ if upload_file is not None:
             p=0
         predicted_class = classes[p]
 
-        streamlit.success(f'prediction:{predicted_class},{prediction}')
+        streamlit.success(f'prediction:{predicted_class}')
