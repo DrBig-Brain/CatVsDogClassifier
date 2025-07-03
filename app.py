@@ -15,7 +15,7 @@ upload_file = streamlit.file_uploader("choose and image ...",type = ['jpg','jpeg
 
 if upload_file is not None:
     img = Image.open(upload_file)
-    streamlit.image(img, caption = 'upload_image',use_column_width=True)
+    streamlit.image(img, caption = 'upload_image')
 
     if streamlit.button('predict'):
         img_resized = img.resize((256,256))
@@ -29,4 +29,4 @@ if upload_file is not None:
             p=0
         predicted_class = classes[p]
 
-        streamlit.success(f'prediction:{predicted_class},{prediction}')
+        streamlit.success(f'prediction:{predicted_class}')
